@@ -47,5 +47,12 @@ func main() {
 	_ = "ini tidak digunakan"
 	bahasa, _ := "Golang", 2019
 	fmt.Println("penggunaan _ pada pembuatan varible dikarenakan golang tidak bisa menerima jika ada varible yang unussed di", bahasa)
+	fmt.Println("---------------------------------")
+
+	// membuat varible dengan new (pointer string)
+	// dalam penggunaakn pointer string harus menggunakan dereference dengan menambahkan tanda asterisk(*) agar yang tampil valuenya
+	switching := new(string)
+	fmt.Println("ini adalah service switching", switching) //akan menampilkan alamat memori value tsb dalam bentuk notasi heksadesimal
+	fmt.Println("ini adalah service dari switching", *switching, "yang dibuat menggunakan dereference dengan menambahkan tanda asterisk(*)")
 
 }
