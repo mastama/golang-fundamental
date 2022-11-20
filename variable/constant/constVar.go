@@ -25,8 +25,26 @@ const (
 	StatusPartialContent       = 206
 )
 
+// deklrasi multiple konstanta dalam satu baris:
+const four, five, six int = 4, 5, 6
+
 func main() {
 	fmt.Println(Pi)
 	fmt.Println(StatusAccepted)
 	fmt.Println(Big, Small, Truth)
+
+	const (
+		today string = "saturday"
+		sekarang
+	)
+	isToday := true
+
+	/*
+	* - today dideklarasikan dengan metode manifest typing dengan tipe data string dan nilainya "senin"
+	* - sekarang dideklarasikan dengan metode manifest typing dengan tipe data string dan nilainya "senin"
+	* - isToday2 dideklarasikan dengan metode type inference dengan tipe data bool dan nilainya true
+	 */
+
+	fmt.Println(today, sekarang, isToday, four, five, six)
+	fmt.Println(today, sekarang, isToday, four+five+six)
 }
